@@ -89,7 +89,7 @@ body.dark .topbar{background:rgba(15,30,40,.7)}
 .hero-copy .lead{margin:14px 0 18px}
 
 /* dissolved image look (remove border if you still had it) */
-.photo{width:100%;height:auto;border:0;border-radius:0;box-shadow:none}
+.photo{width:100%;height:auto;border:2;border-radius:1;box-shadow:none}
 
 /* hero slideshow layer + controls */
 .hero-slides{position:absolute;inset:0;z-index:0}
