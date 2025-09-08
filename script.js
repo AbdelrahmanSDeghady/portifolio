@@ -77,46 +77,19 @@ document.querySelectorAll('.modal').forEach(m => {
   });
 });
 
-// Mobile menu toggle (robust)
+// ===== MOBILE MENU (hamburger) =====
 (() => {
   const burger = document.querySelector('.hamburger');
-  const menu   = document.getElementById('siteMenu');
+  const menu = document.getElementById('siteMenu');
   if (!burger || !menu) return;
-
-  const open  = () => {
-    menu.classList.add('open');
-    burger.setAttribute('aria-expanded','true');
-    document.body.classList.add('noscroll');
-  };
-  const close = () => {
-    menu.classList.remove('open');
-    burger.setAttribute('aria-expanded','false');
-    document.body.classList.remove('noscroll');
-  };
-
+  const close = () => { menu.classList.remove('open'); burger.setAttribute('aria-expanded','false'); };
+  const open  = () => { menu.classList.add('open'); burger.setAttribute('aria-expanded','true'); };
   burger.addEventListener('click', () =>
     menu.classList.contains('open') ? close() : open()
   );
-
-  // 1) close when a nav link is tapped
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
-
-  // 2) close when tapping outside the links (menu background)
-  menu.addEventListener('click', (e) => {
-    if (e.target === menu) close();
-  });
-
-  // 3) close on ESC
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
-
-  // 4) close if the page scrolls (user starts reading)
-  let lastY = window.scrollY;
-  window.addEventListener('scroll', () => {
-    if (menu.classList.contains('open') && Math.abs(window.scrollY - lastY) > 5) close();
-    lastY = window.scrollY;
-  }, { passive:true });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
 })();
-
 
 // ===== HERO SLIDESHOW (optional; uses .hero-slides if present) =====
 (() => {
