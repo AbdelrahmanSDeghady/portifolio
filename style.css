@@ -103,6 +103,24 @@ body.dark .topbar{background:rgba(15,30,40,.7)}
     margin-right: 0;
   }
 }
+.hero-image-frame {
+  display: inline-block;
+  padding: 12px;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 4px 32px 0 rgba(30,40,60,0.10);
+  transition: background 0.3s;
+}
+body.dark .hero-image-frame {
+  background: #181f2a;
+  border: 1px solid #2b4655;
+}
+.hero-image-frame .photo {
+  display: block;
+  width: 160px; /* or 100% as needed */
+  height: auto;
+  border-radius: 16px;
+}
 
 /* ===================== EXISTING STYLES UNCHANGED ===================== */
 /* (Keep your existing button, hero, card, timeline, etc. styles here) */
