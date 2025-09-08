@@ -13,23 +13,29 @@
 <body>
   <div id="loader" aria-hidden="true"><div class="spinner"></div></div>
 
-  <header class="topbar">
-    <div class="wrap nav">
-      <a class="brand" href="#hero" aria-label="Go to top">AD</a>
-      <nav class="menu">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#research">Research</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#speaking">Speaking</a>
-        <a href="#contact" class="btn small">Contact</a>
-        <button id="themeToggle" class="btn icon" aria-label="Toggle color theme">🌙</button>
-      </nav>
-    </div>
-  </header>
+ <header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#hero" aria-label="Go to top">AD</a>
+
+    <!-- Mobile hamburger -->
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="siteMenu">☰</button>
+
+    <!-- Give nav an id so JS can toggle it -->
+    <nav class="menu" id="siteMenu" role="navigation">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#contact" class="btn small">Contact</a>
+      <button id="themeToggle" class="btn icon" aria-label="Toggle color theme">🌙</button>
+    </nav>
+  </div>
+</header>
+
 
   <!-- HERO -->
   <section id="hero" class="hero gradient-bg">
