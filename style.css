@@ -89,15 +89,7 @@ body.dark .topbar{background:rgba(15,30,40,.7)}
 .hero-copy .lead{margin:14px 0 18px}
 
 /* dissolved image look (remove border if you still had it) */
-.photo {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
-            /* The magic: use a mask to create the dissolved look */
-            mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-            -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-        }
+.photo{width:100%;border-radius:22px;border:6px solid #fff;box-shadow:var(--shadow)}
 
 /* hero slideshow layer + controls */
 .hero-slides{position:absolute;inset:0;z-index:0}
